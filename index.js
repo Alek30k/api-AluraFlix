@@ -26,7 +26,9 @@ app.use(cors());
 app.use("/api/video", videoRoutes);
 app.use("/api/category", categoryRoutes);
 
-app.listen(8800, () => {
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
   connect();
   console.log("backend corriendo");
 });
