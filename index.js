@@ -11,9 +11,7 @@ const connect = () => {
   mongoose
     .connect(process.env.MONGO)
     .then(() => {
-      console.log(
-        "mongodb+srv://Alek30k:aleisa562196@cluster0.xxdbz30.mongodb.net/alauraflix?retryWrites=true&w=majority"
-      );
+      console.log("Connected to DB");
     })
     .catch((err) => {
       throw err;
