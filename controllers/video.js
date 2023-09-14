@@ -62,3 +62,12 @@ export const updateCategory = async (req, res, next) => {
     next(err);
   }
 };
+
+export const deleteCategory = async (req, res, next) => {
+  try {
+    await Category.findByIdAndDelete(req.params.id);
+    res.status(200).send("Category has been deleted!");
+  } catch (err) {
+    next(err);
+  }
+};

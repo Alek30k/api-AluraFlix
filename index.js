@@ -9,9 +9,7 @@ dotenv.config();
 
 const connect = () => {
   mongoose
-    .connect(
-      "mongodb+srv://Alek30k:aleisa562196@cluster0.xxdbz30.mongodb.net/alauraflix?retryWrites=true&w=majority"
-    )
+    .connect(process.env.MONGO)
     .then(() => {
       console.log("Connected to DB");
     })

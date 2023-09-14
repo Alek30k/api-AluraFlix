@@ -1,7 +1,7 @@
 import express from "express";
 import {
   getcategory,
-  updateCategory,
+  deleteCategory,
   addcategory,
   addVideo,
   getVideo,
@@ -10,15 +10,11 @@ import {
 const router = express.Router();
 
 router.get("/", getVideo);
-// router.post("/:idCateagory", addVideo);
 router.get("/search", getcategory);
 router.post("/addcategory", addcategory);
 router.post("/:categoryid", addVideo);
-router.put("/:id", updateCategory);
 
-// router.put("/:id", addVideo);
-
-// router.delete("/:id", addVideo);
+router.delete("/:id", deleteCategory);
 
 // router.get("/find/:id", getVideo);
 
